@@ -1,0 +1,35 @@
+﻿# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Node.js dependencies
+node_modules/
+
+# Logs and local database files
+*.log
+instance/
+# Temporary homepage analysis and debugging scripts
+/analyze_sections*.js
+/debug_sections.js
+/find_*.js
+/extract_*.ps1
+
+# Legacy Genius template pages — keep locally, exclude from GitHub
+/genius/blogs.html
+/genius/blogs/
+/genius/changelog.html
+/genius/contact.html
+/genius/waitlist.html
+/genius/index_backup.html

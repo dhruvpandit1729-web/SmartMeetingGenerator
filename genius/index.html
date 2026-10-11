@@ -1,0 +1,3615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Meeting Generator — AI-Powered Meeting Intelligence Dashboard</title>
+    <meta name="description" content="Turn your meetings into clear, actionable intelligence with Smart Meeting Generator. Executive summaries, action items, owners, deadlines, and decisions.">
+    
+    <link href="images/MnL889f6kJ0lQCgQgRLTapyWQ.2fa88.svg" rel="icon" media="(prefers-color-scheme: light)">
+    <link href="images/MnL889f6kJ0lQCgQgRLTapyWQ.2fa88.svg" rel="icon" media="(prefers-color-scheme: dark)">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawDFXplDs.c1825.woff2") format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawDVXplDs.c1825.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawA1Xp.c1825.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawDFXplDs.c1825.woff2") format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawDVXplDs.c1825.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawA1Xp.c1825.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawDFXplDs.c1825.woff2") format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawDVXplDs.c1825.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:700;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawA1Xp.c1825.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:800;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawDFXplDs.c1825.woff2") format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:800;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawDVXplDs.c1825.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Bricolage Grotesque;font-style:normal;font-weight:800;font-stretch:100%;font-display:swap;src:url("fonts/3y9H6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_OJWiawA1Xp.c1825.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Instrument Sans;font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url("fonts/pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSQb_jf8kywf3w.331e4.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Instrument Sans;font-style:normal;font-weight:600;font-stretch:100%;font-display:swap;src:url("fonts/pximypc9vsFDm051Uf6KVwgkfoSxQ0GsQv8ToedPibnr-yp2JGEJOH9npSQb_jfykyw.331e4.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:swap;src:url("fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_P-bnBeA.7ea98.woff2") format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:swap;src:url("fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_G-bnBeA.7ea98.woff2") format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:swap;src:url("fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_B-bnBeA.7ea98.woff2") format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:swap;src:url("fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_N-bnBeA.7ea98.woff2") format("woff2");unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:swap;src:url("fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_M-bnBeA.7ea98.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Manrope;font-style:normal;font-weight:500;font-display:swap;src:url("fonts/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk7PFN_C-bk.7ea98.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;src:url("fonts/5vvr9Vy74if2I6bQbJvbw7SY1pQ.abed4.woff2");font-display:swap;font-style:normal;font-weight:400;unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter;src:url("fonts/EOr0mi4hNtlgWNn9if640EZzXCo.abed4.woff2");font-display:swap;font-style:normal;font-weight:400;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Inter;src:url("fonts/Y9k9QrlZAqio88Klkmbd8VoMQc.abed4.woff2");font-display:swap;font-style:normal;font-weight:400;unicode-range:U+1F00-1FFF}@font-face{font-family:Inter;src:url("fonts/OYrD2tBIBPvoJXiIHnLoOXnY9M.abed4.woff2");font-display:swap;font-style:normal;font-weight:400;unicode-range:U+0370-03FF}@font-face{font-family:Inter;src:url("fonts/JeYwfuaPfZHQhEG8U5gtPDZ7WQ.abed4.woff2");font-display:swap;font-style:normal;font-weight:400;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;src:url("fonts/vQyevYAyHtARFwPqUzQGpnDs.abed4.woff2");font-display:swap;font-style:normal;font-weight:400;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;src:url("fonts/b6Y37FthZeALduNqHicBT6FutY.abed4.woff2");font-display:swap;font-style:normal;font-weight:400;unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Inter;src:url("fonts/5A3Ce6C9YYmCjpQx9M4inSaKU.abed4.woff2");font-display:swap;font-style:normal;font-weight:500;unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter;src:url("fonts/Qx95Xyt0Ka3SGhinnbXIGpEIyP4.abed4.woff2");font-display:swap;font-style:normal;font-weight:500;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Inter;src:url("fonts/6mJuEAguuIuMog10gGvH5d3cl8.abed4.woff2");font-display:swap;font-style:normal;font-weight:500;unicode-range:U+1F00-1FFF}@font-face{font-family:Inter;src:url("fonts/xYYWaj7wCU5zSQH0eXvSaS19wo.abed4.woff2");font-display:swap;font-style:normal;font-weight:500;unicode-range:U+0370-03FF}@font-face{font-family:Inter;src:url("fonts/otTaNuNpVK4RbdlT7zDDdKvQBA.abed4.woff2");font-display:swap;font-style:normal;font-weight:500;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;src:url("fonts/d3tHnaQIAeqiE5hGcRw4mmgWYU.abed4.woff2");font-display:swap;font-style:normal;font-weight:500;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;src:url("fonts/DolVirEGb34pEXEp8t8FQBSK4.abed4.woff2");font-display:swap;font-style:normal;font-weight:500;unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Inter;src:url("fonts/hyOgCu0Xnghbimh0pE8QTvtt2AU.abed4.woff2");font-display:swap;font-style:normal;font-weight:600;unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter;src:url("fonts/NeGmSOXrPBfEFIy5YZeHq17LEDA.abed4.woff2");font-display:swap;font-style:normal;font-weight:600;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Inter;src:url("fonts/oYaAX5himiTPYuN8vLWnqBbfD2s.abed4.woff2");font-display:swap;font-style:normal;font-weight:600;unicode-range:U+1F00-1FFF}@font-face{font-family:Inter;src:url("fonts/lEJLP4R0yuCaMCjSXYHtJw72M.abed4.woff2");font-display:swap;font-style:normal;font-weight:600;unicode-range:U+0370-03FF}@font-face{font-family:Inter;src:url("fonts/cRJyLNuTJR5jbyKzGi33wU9cqIQ.abed4.woff2");font-display:swap;font-style:normal;font-weight:600;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;src:url("fonts/1ZFS7N918ojhhd0nQWdj3jz4w.abed4.woff2");font-display:swap;font-style:normal;font-weight:600;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;src:url("fonts/A0Wcc7NgXMjUuFdquHDrIZpzZw0.abed4.woff2");font-display:swap;font-style:normal;font-weight:600;unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Inter;src:url("fonts/DpPBYI0sL4fYLgAkX8KXOPVt7c.abed4.woff2");font-display:swap;font-style:normal;font-weight:700;unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter;src:url("fonts/4RAEQdEOrcnDkhHiiCbJOw92Lk.abed4.woff2");font-display:swap;font-style:normal;font-weight:700;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Inter;src:url("fonts/1K3W8DizY3v4emK8Mb08YHxTbs.abed4.woff2");font-display:swap;font-style:normal;font-weight:700;unicode-range:U+1F00-1FFF}@font-face{font-family:Inter;src:url("fonts/tUSCtfYVM1I1IchuyCwz9gDdQ.abed4.woff2");font-display:swap;font-style:normal;font-weight:700;unicode-range:U+0370-03FF}@font-face{font-family:Inter;src:url("fonts/VgYFWiwsAC5OYxAycRXXvhze58.abed4.woff2");font-display:swap;font-style:normal;font-weight:700;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;src:url("fonts/DXD0Q7LSl7HEvDzucnyLnGBHM.abed4.woff2");font-display:swap;font-style:normal;font-weight:700;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;src:url("fonts/GIryZETIX4IFypco5pYZONKhJIo.abed4.woff2");font-display:swap;font-style:normal;font-weight:700;unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Inter;src:url("fonts/H89BbHkbHDzlxZzxi8uPzTsp90.abed4.woff2");font-display:swap;font-style:italic;font-weight:700;unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter;src:url("fonts/u6gJwDuwB143kpNK1T1MDKDWkMc.abed4.woff2");font-display:swap;font-style:italic;font-weight:700;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Inter;src:url("fonts/43sJ6MfOPh1LCJt46OvyDuSbA6o.abed4.woff2");font-display:swap;font-style:italic;font-weight:700;unicode-range:U+1F00-1FFF}@font-face{font-family:Inter;src:url("fonts/wccHG0r4gBDAIRhfHiOlq6oEkqw.abed4.woff2");font-display:swap;font-style:italic;font-weight:700;unicode-range:U+0370-03FF}@font-face{font-family:Inter;src:url("fonts/WZ367JPwf9bRW6LdTHN8rXgSjw.abed4.woff2");font-display:swap;font-style:italic;font-weight:700;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;src:url("fonts/QxmhnWTzLtyjIiZcfaLIJ8EFBXU.abed4.woff2");font-display:swap;font-style:italic;font-weight:700;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;src:url("fonts/2A4Xx7CngadFGlVV4xrO06OBHY.abed4.woff2");font-display:swap;font-style:italic;font-weight:700;unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Inter;src:url("fonts/khkJkwSL66WFg8SX6Wa726c.abed4.woff2");font-display:swap;font-style:italic;font-weight:500;unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter;src:url("fonts/0E7IMbDzcGABpBwwqNEt60wU0w.abed4.woff2");font-display:swap;font-style:italic;font-weight:500;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Inter;src:url("fonts/NTJ0nQgIF0gcDelS14zQ9NR9Q.abed4.woff2");font-display:swap;font-style:italic;font-weight:500;unicode-range:U+1F00-1FFF}@font-face{font-family:Inter;src:url("fonts/QrcNhgEPfRl0LS8qz5Ln8olanl8.abed4.woff2");font-display:swap;font-style:italic;font-weight:500;unicode-range:U+0370-03FF}@font-face{font-family:Inter;src:url("fonts/JEXmejW8mXOYMtt0hyRg811kHac.abed4.woff2");font-display:swap;font-style:italic;font-weight:500;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;src:url("fonts/ksvR4VsLksjpSwnC2fPgHRNMw.abed4.woff2");font-display:swap;font-style:italic;font-weight:500;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;src:url("fonts/uy9s0iWuxiNnVt8EpTI3gzohpwo.abed4.woff2");font-display:swap;font-style:italic;font-weight:500;unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Inter;src:url("fonts/vxBnBhH8768IFAXAb4Qf6wQHKs.abed4.woff2");font-display:swap;font-style:italic;font-weight:600;unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter;src:url("fonts/zSsEuoJdh8mcFVk976C05ZfQr8.abed4.woff2");font-display:swap;font-style:italic;font-weight:600;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Inter;src:url("fonts/b8ezwLrN7h2AUoPEENcsTMVJ0.abed4.woff2");font-display:swap;font-style:italic;font-weight:600;unicode-range:U+1F00-1FFF}@font-face{font-family:Inter;src:url("fonts/mvNEIBLyHbscgHtwfsByjXUz3XY.abed4.woff2");font-display:swap;font-style:italic;font-weight:600;unicode-range:U+0370-03FF}@font-face{font-family:Inter;src:url("fonts/6FI2EneKzM3qBy5foOZXey7coCA.abed4.woff2");font-display:swap;font-style:italic;font-weight:600;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;src:url("fonts/qrVgiXNd6RuQjETYQiVQ9nqCk.abed4.woff2");font-display:swap;font-style:italic;font-weight:600;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;src:url("fonts/NHHeAKJVP0ZWHk5YZnQQChIsBM.abed4.woff2");font-display:swap;font-style:italic;font-weight:600;unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Inter;src:url("fonts/CfMzU8w2e7tHgF4T4rATMPuWosA.abed4.woff2");font-display:swap;font-style:italic;font-weight:400;unicode-range:U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Inter;src:url("fonts/867QObYax8ANsfX4TGEVU9YiCM.abed4.woff2");font-display:swap;font-style:italic;font-weight:400;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Inter;src:url("fonts/Oyn2ZbENFdnW7mt2Lzjk1h9Zb9k.abed4.woff2");font-display:swap;font-style:italic;font-weight:400;unicode-range:U+1F00-1FFF}@font-face{font-family:Inter;src:url("fonts/cdAe8hgZ1cMyLu9g005pAW3xMo.abed4.woff2");font-display:swap;font-style:italic;font-weight:400;unicode-range:U+0370-03FF}@font-face{font-family:Inter;src:url("fonts/DOfvtmE1UplCq161m6Hj8CSQYg.abed4.woff2");font-display:swap;font-style:italic;font-weight:400;unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;src:url("fonts/vFzuJY0c65av44uhEKB6vyjFMg.abed4.woff2");font-display:swap;font-style:italic;font-weight:400;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;src:url("fonts/tKtBcDnBMevsEEJKdNGhhkLzYo.abed4.woff2");font-display:swap;font-style:italic;font-weight:400;unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+1EA0-1EF9,U+20AB}@font-face{font-family:Bricolage Grotesque Placeholder;src:local("Arial");ascent-override:87.18%;descent-override:25.31%;line-gap-override:0%;size-adjust:106.68%}@font-face{font-family:Instrument Sans Placeholder;src:local("Arial");ascent-override:93.97%;descent-override:24.22%;line-gap-override:0%;size-adjust:103.22%}@font-face{font-family:Manrope Placeholder;src:local("Arial");ascent-override:102.74%;descent-override:28.91%;line-gap-override:0%;size-adjust:103.76%}@font-face{font-family:Inter Placeholder;src:local("Arial");ascent-override:89.79%;descent-override:22.36%;line-gap-override:0%;size-adjust:107.89%}
+
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-dark: #0f172a;
+            --bg-dark-card: #182234;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --border-light: #e2e8f0;
+            --border-dark: rgba(255, 255, 255, 0.1);
+            --accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --accent-light: #eff6ff;
+            --emerald: #059669;
+            --emerald-bg: #ecfdf5;
+            --amber: #d97706;
+            --amber-bg: #fef3c7;
+            --purple: #7c3aed;
+            --purple-bg: #f5f3ff;
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 12px;
+            --radius-full: 9999px;
+            --font-heading: 'Bricolage Grotesque', 'Inter', -apple-system, sans-serif;
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===================================================
+           1. NAVIGATION
+           =================================================== */
+        .navbar-wrapper {
+            position: sticky;
+            top: 16px;
+            z-index: 1000;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(15, 23, 42, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-dark);
+            border-radius: var(--radius-md);
+            padding: 10px 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+            color: #ffffff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav-logo-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .nav-link {
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #cbd5e1;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .nav-link.active {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .nav-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #0f172a;
+            font-size: 13.5px;
+            font-weight: 600;
+            padding: 8px 18px;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-cta-btn:hover {
+            background: #f1f5f9;
+            transform: translateY(-1px);
+        }
+
+        /* ===================================================
+           PHASE 3: DEDICATED DASHBOARD WORKSPACE
+           =================================================== */
+        .dashboard-section {
+            padding: 36px 0 60px;
+            margin-top: 20px;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-light);
+            scroll-margin-top: 110px;
+        }
+
+        .dash-header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 28px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .dash-eyebrow-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .dash-eyebrow {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        .dash-demo-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #475569;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            padding: 2px 9px;
+            border-radius: var(--radius-full);
+            letter-spacing: 0.02em;
+        }
+
+        .dash-demo-indicator::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #3b82f6;
+        }
+
+        .dash-heading {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .dash-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .dash-primary-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px 22px;
+            border-radius: var(--radius-sm);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
+            transition: all 0.2s ease;
+        }
+
+        .dash-primary-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+        }
+
+        .btn-plus {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        /* KPI Grid */
+        .dash-kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 28px;
+        }
+
+        .dash-kpi-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 20px 22px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            transition: all 0.2s ease;
+        }
+
+        .dash-kpi-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
+        }
+
+        .dash-kpi-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .dash-kpi-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .icon-blue { background: #eff6ff; }
+        .icon-amber { background: #fef3c7; }
+        .icon-emerald { background: #ecfdf5; }
+        .icon-purple { background: #f5f3ff; }
+
+        .dash-kpi-value {
+            font-family: var(--font-heading);
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+
+        .dash-kpi-title {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 2px;
+        }
+
+        .dash-kpi-subtitle {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Main 2-Column Dashboard Workspace Grid */
+        .dash-main-grid {
+            display: grid;
+            grid-template-columns: 1.18fr 0.82fr;
+            gap: 24px;
+        }
+
+        .dash-panel {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .dash-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .dash-panel-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dash-panel-title {
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .dash-badge-count {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent);
+            background: var(--accent-light);
+            padding: 2px 8px;
+            border-radius: var(--radius-full);
+        }
+
+        .dash-badge-sub {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* Recent Meetings List */
+        .dash-meetings-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .dash-meeting-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 18px;
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .dash-meeting-card:hover {
+            background: #ffffff;
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+        }
+
+        .dash-meeting-name {
+            font-family: var(--font-heading);
+            font-size: 15.5px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .dash-meeting-date {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .dash-meeting-meta {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .meta-pill {
+            font-size: 11.5px;
+            font-weight: 500;
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            padding: 3px 9px;
+            border-radius: var(--radius-full);
+        }
+
+        .meta-pill.sentiment-pos {
+            background: #ecfdf5;
+            border-color: #a7f3d0;
+            color: #059669;
+            font-weight: 600;
+        }
+
+        .meta-pill.sentiment-neu {
+            background: #f8fafc;
+            border-color: #e2e8f0;
+            color: #475569;
+            font-weight: 600;
+        }
+
+        .dash-view-btn {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+
+        .dash-view-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #ffffff;
+        }
+
+        /* Meeting Activity Overview */
+        .dash-activity-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .activity-bars-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            height: 125px;
+            align-items: flex-end;
+            padding: 16px 12px 10px;
+            background: #f8fafc;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-light);
+        }
+
+        .activity-bar-col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            justify-content: flex-end;
+            gap: 6px;
+        }
+
+        .activity-bar-track {
+            width: 28px;
+            height: 75px;
+            background: #e2e8f0;
+            border-radius: 6px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+        }
+
+        .activity-bar-fill {
+            width: 100%;
+            background: linear-gradient(180deg, #3b82f6, #2563eb);
+            border-radius: 6px;
+            transition: height 0.4s ease;
+        }
+
+        .activity-day {
+            font-size: 11.5px;
+            font-weight: 600;
+            color: #64748b;
+        }
+
+        .activity-val {
+            font-size: 10.5px;
+            color: #94a3b8;
+        }
+
+        .activity-legend {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12.5px;
+            color: var(--text-muted);
+            padding: 0 4px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        /* Action Items Snapshot */
+        .dash-actions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .dash-action-card {
+            padding: 14px 16px;
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .dash-action-card:hover {
+            background: #ffffff;
+            border-color: #cbd5e1;
+        }
+
+        .action-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 8px;
+        }
+
+        .action-task-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .action-status-badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 2px 7px;
+            border-radius: var(--radius-full);
+            white-space: nowrap;
+        }
+
+        .action-status-badge.status-progress {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .action-status-badge.status-review {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .action-card-tags {
+            display: flex;
+            gap: 10px;
+            font-size: 12.5px;
+        }
+
+        .action-owner-pill {
+            color: #1d4ed8;
+            font-weight: 500;
+        }
+
+        .action-deadline-pill {
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* Recent Decisions */
+        .dash-decisions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .dash-decision-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+        }
+
+        .decision-check-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ecfdf5;
+            color: #059669;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 800;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .decision-text {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.45;
+            margin: 0;
+        }
+
+        /* Quick Actions */
+        .dash-quick-actions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .quick-action-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 12px 16px;
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+
+        .quick-action-btn:hover {
+            background: #ffffff;
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .quick-action-btn.btn-primary-alt {
+            background: #eff6ff;
+            border-color: #bfdbfe;
+            color: #1d4ed8;
+        }
+
+        .quick-action-btn.btn-primary-alt:hover {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+        }
+
+        /* ===================================================
+           2. HERO SECTION (Phase 2 Approved)
+           =================================================== */
+        .hero-section {
+            padding: 70px 0 50px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f1f5f9;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-full);
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 54px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.12;
+            color: var(--text-primary);
+            max-width: 860px;
+            margin: 0 auto 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto 36px;
+        }
+
+        .hero-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #0f172a;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: var(--radius-full);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
+            margin-bottom: 40px;
+        }
+
+        .hero-cta-btn:hover {
+            background: #1e293b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.25);
+        }
+
+        /* ===================================================
+           3. PRODUCT VISUAL (Live Mockup Preview)
+           =================================================== */
+        .product-visual-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .mockup-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 24px;
+        }
+
+        .mockup-title-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .window-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .window-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dot-red { background: #ef4444; }
+        .dot-yellow { background: #f59e0b; }
+        .dot-green { background: #10b981; }
+
+        .mockup-title {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text-primary);
+        }
+
+        .mockup-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--emerald-bg);
+            color: var(--emerald);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+        }
+
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 20px;
+        }
+
+        .mockup-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+        }
+
+        .mockup-card-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .mockup-summary-text {
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .mockup-pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .mockup-pill {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-full);
+            padding: 4px 10px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .mockup-action-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 12px;
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 13.5px;
+        }
+        .mockup-action-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .action-owner-tag {
+            font-weight: 600;
+            color: #2563eb;
+            background: #eff6ff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-right: 6px;
+        }
+
+        .action-deadline-tag {
+            font-weight: 500;
+            color: #64748b;
+            font-size: 12px;
+        }
+
+        .decision-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .decision-check {
+            color: var(--emerald);
+            font-weight: 700;
+        }
+
+        /* ===================================================
+           GLOBAL SECTION HEADERS
+           =================================================== */
+        .py-section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 50px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 38px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+
+        .section-desc {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        /* ===================================================
+           4. CORE CAPABILITIES (6 Cards)
+           =================================================== */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .capability-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            transition: all 0.2s ease;
+        }
+
+        .capability-card:hover {
+            border-color: #cbd5e1;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .capability-icon {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .capability-title {
+            font-family: var(--font-heading);
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .capability-desc {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ===================================================
+           5. HOW IT WORKS
+           =================================================== */
+        .how-it-works-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .step-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            padding: 20px 24px;
+            transition: all 0.2s ease;
+        }
+
+        .step-card.active {
+            border-color: #2563eb;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.08);
+        }
+
+        .step-card:hover {
+            border-color: #94a3b8;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+        }
+
+        .step-number {
+            font-size: 13px;
+            font-weight: 700;
+            color: #2563eb;
+            margin-bottom: 6px;
+            letter-spacing: 0.05em;
+        }
+
+        .step-title {
+            font-family: var(--font-heading);
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .step-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .how-it-works-visual {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            color: #ffffff;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+        }
+
+        .flow-node {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            margin-bottom: 16px;
+        }
+        .flow-node:last-child {
+            margin-bottom: 0;
+        }
+
+        .flow-node-title {
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .flow-node-desc {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        /* ===================================================
+           6. MEETING INTELLIGENCE (Split-screen)
+           =================================================== */
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intelligence-left {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+        }
+
+        .feature-pills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .feature-pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-full);
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        /* ===================================================
+           7. INPUT METHODS (4 Cards)
+           =================================================== */
+        .inputs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .input-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .input-card:hover {
+            border-color: #2563eb;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+        }
+
+        .input-card-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .input-card-title {
+            font-family: var(--font-heading);
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .input-card-desc {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+        }
+
+        /* ===================================================
+           8. BUILT FOR SMARTER MEETINGS (3 Pillars)
+           =================================================== */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .pillar-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 32px;
+        }
+
+        .pillar-badge {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: #2563eb;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .pillar-title {
+            font-family: var(--font-heading);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .pillar-desc {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ===================================================
+           9. OUR TEAM
+           =================================================== */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .team-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.06);
+        }
+
+        .team-img-wrapper {
+            width: 100%;
+            height: 240px;
+            background: #f1f5f9;
+            overflow: hidden;
+        }
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-content {
+            padding: 16px;
+        }
+
+        .team-name {
+            font-family: var(--font-heading);
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .team-role {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+        }
+
+        /* ===================================================
+           10. FAQ ACCORDION
+           =================================================== */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .faq-item[open] {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+        }
+
+        .faq-question {
+            padding: 18px 22px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-icon {
+            font-size: 20px;
+            font-weight: 400;
+            color: #64748b;
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item[open] .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 22px 18px;
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        /* ===================================================
+           11. FINAL CTA
+           =================================================== */
+        .cta-card {
+            background: #0f172a;
+            border-radius: var(--radius-lg);
+            padding: 60px 40px;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-title {
+            font-family: var(--font-heading);
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .cta-desc {
+            font-size: 17px;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #ffffff;
+            color: #0f172a;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 14px 34px;
+            border-radius: var(--radius-full);
+            transition: all 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background: #f1f5f9;
+            transform: translateY(-2px);
+        }
+
+        .cta-badges-row {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .cta-badge {
+            font-size: 13px;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ===================================================
+           12. FOOTER
+           =================================================== */
+        .footer-wrapper {
+            background: #0b1120;
+            color: #94a3b8;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 17px;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            max-width: 340px;
+        }
+
+        .footer-col-title {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 14px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        /* ===================================================
+           RESPONSIVE BREAKPOINTS
+           =================================================== */
+        @media (max-width: 1024px) {
+            .dash-kpi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .dash-main-grid {
+                grid-template-columns: 1fr;
+            }
+            .capabilities-grid, .pillars-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .inputs-grid, .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .split-section, .how-it-works-layout, .mockup-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dash-header-wrap {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            .dash-primary-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .dash-kpi-grid {
+                grid-template-columns: 1fr;
+            }
+            .dash-meeting-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .dash-view-btn {
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+            .hero-title {
+                font-size: 38px;
+            }
+            .capabilities-grid, .pillars-grid, .inputs-grid, .team-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* ===================================================
+           PHASE 4: NEW MEETING WORKSPACE
+           =================================================== */
+        #new-meeting {
+            width: 100%;
+            max-width: 940px;
+            margin: 40px auto 0;
+            padding: 40px 30px 60px;
+            box-sizing: border-box;
+            scroll-margin-top: 110px;
+        }
+
+        .nm-shell {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+            overflow: hidden;
+        }
+
+        .nm-header {
+            padding: 30px 34px 26px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .nm-eyebrow {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .nm-heading {
+            font-family: var(--font-heading);
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+
+        .nm-subtitle {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            max-width: 640px;
+        }
+
+        .nm-body {
+            padding: 28px 34px 32px;
+        }
+
+        .nm-field {
+            margin-bottom: 26px;
+        }
+
+        .nm-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+        .nm-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 15px;
+            font-family: inherit;
+            font-size: 14.5px;
+            color: var(--text-primary);
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .nm-input::placeholder {
+            color: #94a3b8;
+        }
+
+        .nm-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+        }
+
+        .nm-hint {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            line-height: 1.55;
+            margin-top: 8px;
+        }
+
+        /* Input method selector */
+
+        .nm-modes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .nm-mode {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 13px 13px;
+            text-align: left;
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.18s ease;
+        }
+
+        .nm-mode:hover {
+            border-color: #cbd5e1;
+            background: #f8fafc;
+        }
+
+        .nm-mode:focus-visible {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+        }
+
+        .nm-mode[aria-selected="true"] {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            box-shadow: 0 0 0 1px var(--accent);
+        }
+
+        .nm-mode-icon {
+            flex: 0 0 auto;
+            width: 30px;
+            height: 30px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+            color: var(--text-secondary);
+            transition: all 0.18s ease;
+        }
+
+        .nm-mode[aria-selected="true"] .nm-mode-icon {
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+        .nm-mode-icon svg {
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        .nm-mode-text {
+            min-width: 0;
+        }
+
+        .nm-mode-title {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        .nm-mode-desc {
+            display: block;
+            font-size: 11.5px;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-top: 2px;
+        }
+
+        /* Mode panels */
+
+        .nm-panels {
+            margin-top: 24px;
+        }
+
+        .nm-panel {
+            display: block;
+        }
+
+        .nm-panel[hidden],
+        .nm-transcript[hidden] {
+            display: none !important;
+        }
+
+        /* Transcript */
+
+        .nm-transcript-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+
+        .nm-transcript-head .nm-label {
+            margin-bottom: 0;
+        }
+
+        .nm-title-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11.5px;
+            font-weight: 600;
+            color: #475569;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            padding: 3px 9px;
+            border-radius: var(--radius-full);
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .nm-textarea {
+            width: 100%;
+            min-height: 300px;
+            box-sizing: border-box;
+            resize: vertical;
+            padding: 16px 17px;
+            font-family: inherit;
+            font-size: 14.5px;
+            line-height: 1.65;
+            color: var(--text-primary);
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            display: block;
+        }
+
+        .nm-textarea::placeholder {
+            color: #94a3b8;
+        }
+
+        .nm-textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+        }
+
+        .nm-counter {
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Upload / drop zone */
+
+        .nm-dropzone {
+            border: 1.5px dashed #cbd5e1;
+            border-radius: var(--radius-md);
+            background: #f8fafc;
+            padding: 30px 24px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .nm-dropzone:hover,
+        .nm-dropzone:focus-visible {
+            border-color: var(--accent);
+            background: var(--accent-light);
+            outline: none;
+        }
+
+        .nm-dropzone[data-drag="true"] {
+            border-color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .nm-dropzone-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 12px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            color: var(--accent);
+        }
+
+        .nm-dropzone-icon svg {
+            width: 19px;
+            height: 19px;
+            display: block;
+        }
+
+        .nm-dropzone-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .nm-dropzone-sub {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .nm-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 18px;
+            font-family: inherit;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #334155;
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nm-btn:hover {
+            border-color: #cbd5e1;
+            background: #f8fafc;
+        }
+
+        .nm-btn:focus-visible {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+        }
+
+        .nm-btn svg {
+            width: 15px;
+            height: 15px;
+            display: block;
+        }
+
+        /* Selected file chip */
+
+        .nm-file-chip {
+            display: none;
+            align-items: center;
+            gap: 12px;
+            margin-top: 14px;
+            padding: 12px 14px;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            background: #ffffff;
+        }
+
+        .nm-file-chip[data-visible="true"] {
+            display: flex;
+        }
+
+        .nm-file-icon {
+            flex: 0 0 auto;
+            width: 32px;
+            height: 32px;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-light);
+            color: var(--accent);
+        }
+
+        .nm-file-icon svg {
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        .nm-file-meta {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .nm-file-name {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--text-primary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .nm-file-size {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .nm-file-remove {
+            flex: 0 0 auto;
+            padding: 6px 12px;
+            font-family: inherit;
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #b91c1c;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nm-file-remove:hover {
+            background: #fee2e2;
+        }
+
+        .nm-file-remove:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.16);
+        }
+
+        /* Speech to text */
+
+        .nm-recorder {
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            background: #f8fafc;
+            padding: 26px 24px;
+            text-align: center;
+        }
+
+        .nm-recorder[data-recording="true"] {
+            background: #fff7f7;
+            border-color: #fecaca;
+        }
+
+        .nm-mic {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+        }
+
+        .nm-recorder[data-recording="true"] .nm-mic {
+            color: #dc2626;
+            border-color: #fecaca;
+            animation: nm-pulse 1.6s ease-in-out infinite;
+        }
+
+        .nm-mic svg {
+            width: 21px;
+            height: 21px;
+            display: block;
+        }
+
+        @keyframes nm-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.22); }
+            50% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+        }
+
+        .nm-mic-label {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+        }
+
+        .nm-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 22px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            background: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nm-btn-primary:hover {
+            background: var(--accent-hover);
+            border-color: var(--accent-hover);
+        }
+
+        .nm-btn-primary:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.24);
+        }
+
+        .nm-btn-primary svg {
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        .nm-btn-danger {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 22px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            background: #dc2626;
+            border: 1px solid #dc2626;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nm-btn-danger:hover {
+            background: #b91c1c;
+            border-color: #b91c1c;
+        }
+
+        .nm-btn-danger:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.24);
+        }
+
+        .nm-btn-danger svg {
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        .nm-record-status {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .nm-record-status[data-recording="true"] {
+            color: #b91c1c;
+            font-weight: 600;
+        }
+
+        /* Status / error area */
+
+        .nm-status {
+            display: none;
+            margin-top: 18px;
+            padding: 12px 15px;
+            border-radius: var(--radius-sm);
+            font-size: 13.5px;
+            line-height: 1.5;
+            border: 1px solid transparent;
+        }
+
+        .nm-status[data-visible="true"] {
+            display: block;
+        }
+
+        .nm-status[data-tone="info"] {
+            color: #1e40af;
+            background: var(--accent-light);
+            border-color: #bfdbfe;
+        }
+
+        .nm-status[data-tone="success"] {
+            color: #065f46;
+            background: var(--emerald-bg);
+            border-color: #a7f3d0;
+        }
+
+        .nm-status[data-tone="error"] {
+            color: #991b1b;
+            background: #fef2f2;
+            border-color: #fecaca;
+        }
+
+        .nm-status[data-tone="recording"] {
+            color: #991b1b;
+            background: #fef2f2;
+            border-color: #fecaca;
+        }
+
+        /* Primary action */
+
+        .nm-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 26px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .nm-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 13px 26px;
+            font-family: inherit;
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #ffffff;
+            background: var(--accent);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.26);
+            transition: all 0.2s ease;
+        }
+
+        .nm-cta:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.32);
+        }
+
+        .nm-cta:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.28);
+        }
+
+        .nm-cta[disabled] {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .nm-cta svg {
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        /* Processing state */
+
+        .nm-processing {
+            display: none;
+            margin-top: 18px;
+            padding: 20px 22px;
+            border: 1px solid #bfdbfe;
+            border-radius: var(--radius-md);
+            background: var(--accent-light);
+        }
+
+        .nm-processing[data-visible="true"] {
+            display: block;
+        }
+
+        .nm-processing-head {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-bottom: 14px;
+        }
+
+        .nm-spinner {
+            flex: 0 0 auto;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            border: 2px solid #bfdbfe;
+            border-top-color: var(--accent);
+            animation: nm-spin 0.75s linear infinite;
+        }
+
+        @keyframes nm-spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .nm-processing-title {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+
+        .nm-steps {
+            list-style: none;
+            display: grid;
+            gap: 8px;
+            padding-left: 28px;
+        }
+
+        .nm-steps li {
+            position: relative;
+            font-size: 13px;
+            color: #1e40af;
+        }
+
+        .nm-steps li::before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: 6px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #93c5fd;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 1024px) {
+            .nm-modes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #new-meeting {
+                margin: 24px auto 0;
+                padding: 24px 18px 40px;
+            }
+            .nm-header {
+                padding: 24px 20px 20px;
+            }
+            .nm-body {
+                padding: 22px 20px 24px;
+            }
+            .nm-heading {
+                font-size: 22px;
+            }
+            .nm-modes {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .nm-textarea {
+                min-height: 220px;
+            }
+            .nm-actions {
+                justify-content: stretch;
+            }
+            .nm-cta {
+                width: 100%;
+            }
+            .nm-file-chip {
+                flex-wrap: wrap;
+            }
+        }
+
+        /* ===================================================
+           PHASE 5: MEETING RESULTS
+           =================================================== */
+        .mr-shell {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+            overflow: hidden;
+        }
+
+        .mr-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 28px 32px 24px;
+            border-bottom: 1px solid var(--border-light);
+            flex-wrap: wrap;
+        }
+
+        .mr-header-left {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .mr-eyebrow {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .mr-heading {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.25;
+            margin-bottom: 4px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .mr-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 6px;
+            flex-wrap: wrap;
+        }
+
+        .mr-meta-sep {
+            color: #cbd5e1;
+        }
+
+        .mr-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 9px 17px;
+            font-family: inherit;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #334155;
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .mr-btn:hover {
+            border-color: #cbd5e1;
+            background: #f8fafc;
+        }
+
+        .mr-btn:focus-visible {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+        }
+
+        .mr-btn svg {
+            width: 15px;
+            height: 15px;
+            display: block;
+        }
+
+        .mr-body {
+            padding: 28px 32px 32px;
+        }
+
+        .mr-section {
+            margin-bottom: 30px;
+        }
+
+        .mr-section-title {
+            font-family: var(--font-heading);
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .mr-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 22px;
+        }
+
+        /* Summary */
+        .mr-summary {
+            font-size: 14.5px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Participants & Topics grid */
+        .mr-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .mr-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .mr-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #334155;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--radius-full);
+        }
+
+        .mr-chip-primary {
+            background: var(--accent-light);
+            border-color: #bfdbfe;
+            color: #1e40af;
+        }
+
+        .mr-empty {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Action Items - table on desktop */
+        .mr-actions-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+        }
+
+        .mr-actions-table th,
+        .mr-actions-table td {
+            padding: 12px 14px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .mr-actions-table th {
+            font-weight: 600;
+            color: var(--text-secondary);
+            background: #f8fafc;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .mr-actions-table td {
+            color: var(--text-primary);
+        }
+
+        .mr-actions-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .mr-actions-table .mr-task {
+            font-weight: 500;
+            max-width: 320px;
+        }
+
+        .mr-actions-table .mr-missing {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .mr-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 3px 9px;
+            font-size: 11.5px;
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            white-space: nowrap;
+        }
+
+        .mr-status-pending {
+            background: #fef3c7;
+            border: 1px solid #fde68a;
+            color: #92400e;
+        }
+
+        .mr-status-inprogress {
+            background: #dbeafe;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+        }
+
+        .mr-status-done {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            color: #065f46;
+        }
+
+        .mr-status-blocked {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+        }
+
+        /* Decisions */
+        .mr-decisions-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .mr-decision-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px 16px;
+            background: #f8fafc;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+        }
+
+        .mr-decision-icon {
+            flex: 0 0 auto;
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--emerald-bg);
+            color: var(--emerald);
+        }
+
+        .mr-decision-icon svg {
+            width: 12px;
+            height: 12px;
+            display: block;
+        }
+
+        .mr-decision-text {
+            flex: 1 1 auto;
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        /* Keywords */
+        .mr-keywords-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        /* Sentiment */
+        .mr-sentiment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 14px;
+        }
+
+        .mr-sentiment-card {
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 18px 16px;
+            text-align: center;
+        }
+
+        .mr-sentiment-overall {
+            grid-column: 1;
+        }
+
+        .mr-sentiment-label {
+            display: block;
+            font-size: 11.5px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .mr-sentiment-value {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .mr-sentiment-bar {
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .mr-sentiment-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.4s ease;
+        }
+
+        .mr-sentiment-fill.positive {
+            background: var(--emerald);
+        }
+
+        .mr-sentiment-fill.neutral {
+            background: var(--amber);
+        }
+
+        .mr-sentiment-fill.negative {
+            background: #ef4444;
+        }
+
+        .mr-sentiment-fill.overall {
+            background: var(--accent);
+        }
+
+        /* Actions */
+        .mr-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 30px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-light);
+            flex-wrap: wrap;
+        }
+
+        .mr-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            background: var(--accent);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.26);
+            transition: all 0.2s ease;
+        }
+
+        .mr-cta:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.32);
+        }
+
+        .mr-cta:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.28);
+        }
+
+        .mr-cta svg {
+            width: 16px;
+            height: 16px;
+            display: block;
+        }
+
+        .mr-cta-secondary {
+            background: #ffffff;
+            color: #334155;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-light);
+        }
+
+        .mr-cta-secondary:hover {
+            background: #f8fafc;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Responsive for Results */
+        @media (max-width: 1024px) {
+            .mr-sentiment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mr-header {
+                padding: 22px 20px 18px;
+            }
+            .mr-heading {
+                font-size: 20px;
+            }
+            .mr-body {
+                padding: 22px 20px 24px;
+            }
+            .mr-grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .mr-sentiment-grid {
+                grid-template-columns: 1fr;
+            }
+            .mr-actions-table {
+                display: block;
+                overflow-x: auto;
+            }
+            .mr-actions {
+                justify-content: stretch;
+            }
+            .mr-cta {
+                width: 100%;
+                justify-content: center;
+            }
+            .mr-decision-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================================================
+         1. NAVIGATION
+         =================================================== -->
+    <div class="navbar-wrapper">
+        <header class="navbar">
+            <a href="#dashboard" class="nav-logo" id="navLogo">
+                <div class="nav-logo-icon">⚡</div>
+                <span>Smart Meeting Generator</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                    <li><a href="#new-meeting" class="nav-link">New Meeting</a></li>
+                    <li><a href="#meeting-history" class="nav-link">History</a></li>
+                    <li><a href="#analytics" class="nav-link">Analytics</a></li>
+                </ul>
+            </nav>
+            <a href="#new-meeting" class="nav-cta-btn">Process a Meeting</a>
+        </header>
+    </div>
+
+    <main id="main-content">
+
+        <!-- ===================================================
+             PHASE 3: DEDICATED APPLICATION DASHBOARD
+             =================================================== -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <!-- 1. Dashboard Header + 2. Primary Action -->
+                <div class="dash-header-wrap">
+                    <div class="dash-header-left">
+                        <div class="dash-eyebrow-row">
+                            <span class="dash-eyebrow">SMART MEETING GENERATOR</span>
+                            <span class="dash-demo-indicator">Demo Mode</span>
+                        </div>
+                        <h1 class="dash-heading">Good afternoon, Dhruv</h1>
+                        <p class="dash-subtitle">Turn your meetings into clear, actionable intelligence.</p>
+                    </div>
+                    <div class="dash-header-right">
+                        <button type="button" class="dash-primary-btn" id="dashProcessBtn" onclick="goToNewMeeting()">
+                            <span class="btn-plus">+</span>
+                            <span>Process New Meeting</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. KPI Overview (4 Cards) -->
+                <div class="dash-kpi-grid">
+                    <div class="dash-kpi-card">
+                        <div class="dash-kpi-top">
+                            <div class="dash-kpi-icon icon-blue">📁</div>
+                        </div>
+                        <div class="dash-kpi-value">13</div>
+                        <div class="dash-kpi-title">Total Meetings</div>
+                        <div class="dash-kpi-subtitle">Meetings processed</div>
+                    </div>
+
+                    <div class="dash-kpi-card">
+                        <div class="dash-kpi-top">
+                            <div class="dash-kpi-icon icon-amber">⚡</div>
+                        </div>
+                        <div class="dash-kpi-value">86</div>
+                        <div class="dash-kpi-title">Total Action Items</div>
+                        <div class="dash-kpi-subtitle">Action items extracted</div>
+                    </div>
+
+                    <div class="dash-kpi-card">
+                        <div class="dash-kpi-top">
+                            <div class="dash-kpi-icon icon-emerald">🎯</div>
+                        </div>
+                        <div class="dash-kpi-value">14</div>
+                        <div class="dash-kpi-title">Total Decisions</div>
+                        <div class="dash-kpi-subtitle">Decisions identified</div>
+                    </div>
+
+                    <div class="dash-kpi-card">
+                        <div class="dash-kpi-top">
+                            <div class="dash-kpi-icon icon-purple">👥</div>
+                        </div>
+                        <div class="dash-kpi-value">37</div>
+                        <div class="dash-kpi-title">Total Participants</div>
+                        <div class="dash-kpi-subtitle">Participants detected</div>
+                    </div>
+                </div>
+
+                <!-- Main Workspace 2-Column Grid -->
+                <div class="dash-main-grid">
+                    <!-- Left Column: Recent Meetings & Meeting Activity -->
+                    <div class="dash-col-left">
+                        <!-- 4. Recent Meetings -->
+                        <div class="dash-panel">
+                            <div class="dash-panel-header">
+                                <div class="dash-panel-title-wrap">
+                                    <h2 class="dash-panel-title">Recent Meetings</h2>
+                                    <span class="dash-badge-count">Latest 3</span>
+                                </div>
+                            </div>
+
+                            <div class="dash-meetings-list">
+                                <!-- Meeting 1 -->
+                                <div class="dash-meeting-card">
+                                    <div class="dash-meeting-info">
+                                        <h3 class="dash-meeting-name">Q3 Product Development Review</h3>
+                                        <div class="dash-meeting-date">20 Sep 2026 · 6:50 PM</div>
+                                        <div class="dash-meeting-meta">
+                                            <span class="meta-pill">👥 3 Participants</span>
+                                            <span class="meta-pill">⚡ 7 Action Items</span>
+                                            <span class="meta-pill sentiment-pos">Positive</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="dash-view-btn" onclick="goToMeetingHistory()">View</button>
+                                </div>
+
+                                <!-- Meeting 2 -->
+                                <div class="dash-meeting-card">
+                                    <div class="dash-meeting-info">
+                                        <h3 class="dash-meeting-name">Marketing Sync</h3>
+                                        <div class="dash-meeting-date">18 Sep 2026 · 4:30 PM</div>
+                                        <div class="dash-meeting-meta">
+                                            <span class="meta-pill">👥 4 Participants</span>
+                                            <span class="meta-pill">⚡ 5 Action Items</span>
+                                            <span class="meta-pill sentiment-neu">Neutral</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="dash-view-btn" onclick="goToMeetingHistory()">View</button>
+                                </div>
+
+                                <!-- Meeting 3 -->
+                                <div class="dash-meeting-card">
+                                    <div class="dash-meeting-info">
+                                        <h3 class="dash-meeting-name">Sprint Planning</h3>
+                                        <div class="dash-meeting-date">16 Sep 2026 · 11:00 AM</div>
+                                        <div class="dash-meeting-meta">
+                                            <span class="meta-pill">👥 6 Participants</span>
+                                            <span class="meta-pill">⚡ 9 Action Items</span>
+                                            <span class="meta-pill sentiment-pos">Positive</span>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="dash-view-btn" onclick="goToMeetingHistory()">View</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Small Meeting Activity Area -->
+                        <div class="dash-panel" style="margin-top: 24px;">
+                            <div class="dash-panel-header">
+                                <div class="dash-panel-title-wrap">
+                                    <h2 class="dash-panel-title">Meeting Activity</h2>
+                                    <span class="dash-badge-sub">Weekly volume</span>
+                                </div>
+                            </div>
+
+                            <div class="dash-activity-wrap">
+                                <div class="activity-bars-grid">
+                                    <div class="activity-bar-col">
+                                        <div class="activity-bar-track">
+                                            <div class="activity-bar-fill" style="height: 50%;" title="Mon: 2 meetings, 12 action items"></div>
+                                        </div>
+                                        <span class="activity-day">Mon</span>
+                                        <span class="activity-val">2</span>
+                                    </div>
+                                    <div class="activity-bar-col">
+                                        <div class="activity-bar-track">
+                                            <div class="activity-bar-fill" style="height: 75%;" title="Tue: 3 meetings, 18 action items"></div>
+                                        </div>
+                                        <span class="activity-day">Tue</span>
+                                        <span class="activity-val">3</span>
+                                    </div>
+                                    <div class="activity-bar-col">
+                                        <div class="activity-bar-track">
+                                            <div class="activity-bar-fill" style="height: 100%;" title="Wed: 4 meetings, 24 action items"></div>
+                                        </div>
+                                        <span class="activity-day">Wed</span>
+                                        <span class="activity-val">4</span>
+                                    </div>
+                                    <div class="activity-bar-col">
+                                        <div class="activity-bar-track">
+                                            <div class="activity-bar-fill" style="height: 50%;" title="Thu: 2 meetings, 16 action items"></div>
+                                        </div>
+                                        <span class="activity-day">Thu</span>
+                                        <span class="activity-val">2</span>
+                                    </div>
+                                    <div class="activity-bar-col">
+                                        <div class="activity-bar-track">
+                                            <div class="activity-bar-fill" style="height: 50%;" title="Fri: 2 meetings, 16 action items"></div>
+                                        </div>
+                                        <span class="activity-day">Fri</span>
+                                        <span class="activity-val">2</span>
+                                    </div>
+                                </div>
+                                <div class="activity-legend">
+                                    <div class="legend-item">
+                                        <span class="legend-dot"></span>
+                                        <span>Meetings Processed</span>
+                                    </div>
+                                    <div class="legend-summary">
+                                        <span>13 meetings this week</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Action Items Snapshot, Recent Decisions, Quick Actions -->
+                    <div class="dash-col-right">
+                        <!-- 5. Action Item Snapshot -->
+                        <div class="dash-panel">
+                            <div class="dash-panel-header">
+                                <div class="dash-panel-title-wrap">
+                                    <h2 class="dash-panel-title">Action Items</h2>
+                                    <span class="dash-badge-count">Top 3</span>
+                                </div>
+                            </div>
+
+                            <div class="dash-actions-list">
+                                <div class="dash-action-card">
+                                    <div class="action-card-header">
+                                        <h4 class="action-task-title">Analytics API Integration</h4>
+                                        <span class="action-status-badge status-progress">In Progress</span>
+                                    </div>
+                                    <div class="action-card-tags">
+                                        <span class="action-owner-pill">👤 Rahul</span>
+                                        <span class="action-deadline-pill">📅 Sep 24</span>
+                                    </div>
+                                </div>
+
+                                <div class="dash-action-card">
+                                    <div class="action-card-header">
+                                        <h4 class="action-task-title">Figma Design System Updates</h4>
+                                        <span class="action-status-badge status-review">Pending Review</span>
+                                    </div>
+                                    <div class="action-card-tags">
+                                        <span class="action-owner-pill">👤 Priya</span>
+                                        <span class="action-deadline-pill">📅 Sep 22</span>
+                                    </div>
+                                </div>
+
+                                <div class="dash-action-card">
+                                    <div class="action-card-header">
+                                        <h4 class="action-task-title">DOCX & Speech Parser Sync</h4>
+                                        <span class="action-status-badge status-progress">In Progress</span>
+                                    </div>
+                                    <div class="action-card-tags">
+                                        <span class="action-owner-pill">👤 Arjun</span>
+                                        <span class="action-deadline-pill">📅 Sep 26</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Recent Decisions -->
+                        <div class="dash-panel" style="margin-top: 24px;">
+                            <div class="dash-panel-header">
+                                <div class="dash-panel-title-wrap">
+                                    <h2 class="dash-panel-title">Recent Decisions</h2>
+                                </div>
+                            </div>
+
+                            <div class="dash-decisions-list">
+                                <div class="dash-decision-card">
+                                    <span class="decision-check-icon">✓</span>
+                                    <p class="decision-text">Product release target confirmed for October 8.</p>
+                                </div>
+                                <div class="dash-decision-card">
+                                    <span class="decision-check-icon">✓</span>
+                                    <p class="decision-text">Fast-track transcript parsing pipeline for the v2 launch.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8. Quick Actions -->
+                        <div class="dash-panel" style="margin-top: 24px;">
+                            <div class="dash-panel-header">
+                                <div class="dash-panel-title-wrap">
+                                    <h2 class="dash-panel-title">Quick Actions</h2>
+                                </div>
+                            </div>
+
+                            <div class="dash-quick-actions-list">
+                                <button type="button" class="quick-action-btn btn-primary-alt" onclick="goToNewMeeting()">
+                                    <span>⚡ Process New Meeting</span>
+                                    <span class="arrow">&rarr;</span>
+                                </button>
+                                <button type="button" class="quick-action-btn" onclick="goToMeetingHistory()">
+                                    <span>📁 View Meeting History</span>
+                                    <span class="arrow">&rarr;</span>
+                                </button>
+                                <button type="button" class="quick-action-btn" onclick="goToAnalytics()">
+                                    <span>📊 Open Analytics Dashboard</span>
+                                    <span class="arrow">&rarr;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             2. HERO
+             =================================================== -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <span>✨</span>
+                    <span>AI-powered meeting intelligence</span>
+                </div>
+                <h1 class="hero-title">Turn Every Meeting into Actionable Intelligence</h1>
+                <p class="hero-subtitle">Transform meetings into concise summaries, decisions, action items, insights, and searchable knowledge.</p>
+                <a href="#new-meeting" class="hero-cta-btn">
+                    <span>Process a Meeting</span>
+                    <span>&rarr;</span>
+                </a>
+
+                <!-- ===================================================
+                     3. PRODUCT VISUAL (Live Mockup Preview)
+                     =================================================== -->
+                <div class="product-visual-card" id="product-preview">
+                    <div class="mockup-header">
+                        <div class="mockup-title-area">
+                            <div class="window-dots">
+                                <div class="window-dot dot-red"></div>
+                                <div class="window-dot dot-yellow"></div>
+                                <div class="window-dot dot-green"></div>
+                            </div>
+                            <span class="mockup-title">Q3 Product Development Review</span>
+                        </div>
+                        <div class="mockup-status-badge">
+                            <span>●</span>
+                            <span>Sentiment: Positive (88% Alignment)</span>
+                        </div>
+                    </div>
+
+                    <div class="mockup-grid">
+                        <!-- AI Summary -->
+                        <div class="mockup-card">
+                            <div class="mockup-card-label">AI Summary</div>
+                            <p class="mockup-summary-text">
+                                The team reviewed development progress across the analytics engine, confirmed design system milestone deliverables, and finalized the October 8 release target with cross-functional alignment.
+                            </p>
+                        </div>
+
+                        <!-- Participants & Topics -->
+                        <div class="mockup-card">
+                            <div class="mockup-card-label">Participants & Topics</div>
+                            <p style="font-size: 13px; color: #64748b; margin-bottom: 6px;">PARTICIPANTS</p>
+                            <p style="font-size: 14px; font-weight: 600; color: #1e293b; margin-bottom: 12px;">Rahul • Priya • Arjun</p>
+                            
+                            <p style="font-size: 13px; color: #64748b; margin-bottom: 6px;">KEY TOPICS</p>
+                            <div class="mockup-pill-row">
+                                <span class="mockup-pill">Release Timeline</span>
+                                <span class="mockup-pill">API Integration</span>
+                                <span class="mockup-pill">Figma Sync</span>
+                            </div>
+                        </div>
+
+                        <!-- Action Items & Owners -->
+                        <div class="mockup-card">
+                            <div class="mockup-card-label">Action Items & Owners</div>
+                            <div class="mockup-action-item">
+                                <span>Analytics API Integration</span>
+                                <div>
+                                    <span class="action-owner-tag">Rahul</span>
+                                    <span class="action-deadline-tag">Sep 24</span>
+                                </div>
+                            </div>
+                            <div class="mockup-action-item">
+                                <span>Figma Design System Updates</span>
+                                <div>
+                                    <span class="action-owner-tag">Priya</span>
+                                    <span class="action-deadline-tag">Sep 22</span>
+                                </div>
+                            </div>
+                            <div class="mockup-action-item">
+                                <span>DOCX & Speech Parser Sync</span>
+                                <div>
+                                    <span class="action-owner-tag">Arjun</span>
+                                    <span class="action-deadline-tag">Sep 26</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Decisions & Sentiment -->
+                        <div class="mockup-card">
+                            <div class="mockup-card-label">Decisions & Outcomes</div>
+                            <div class="decision-item">
+                                <span class="decision-check">✓</span>
+                                <span>Product release target officially confirmed for October 8.</span>
+                            </div>
+                            <div class="decision-item">
+                                <span class="decision-check">✓</span>
+                                <span>Fast-track NLP transcript parsing pipeline for v2 launch.</span>
+                            </div>
+                            <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border-light); display: flex; justify-content: space-between; font-size: 13px;">
+                                <span style="color: #64748b;">Overall Sentiment:</span>
+                                <span style="font-weight: 600; color: var(--emerald);">Positive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+              4. CORE CAPABILITIES (6 Cards)
+              =================================================== -->
+        <section class="py-section" id="core-capabilities">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Capabilities</span>
+                    <h2 class="section-title">Core Meeting Intelligence</h2>
+                    <p class="section-desc">Turn unstructured conversations into clear, actionable information.</p>
+                </div>
+
+                <div class="capabilities-grid">
+                    <div class="capability-card">
+                        <div class="capability-icon">📝</div>
+                        <h3 class="capability-title">AI Meeting Summaries</h3>
+                        <p class="capability-desc">Generate clear, structured overviews highlighting key discussions and core outcomes.</p>
+                    </div>
+
+                    <div class="capability-card">
+                        <div class="capability-icon">⚡</div>
+                        <h3 class="capability-title">Action Item Extraction</h3>
+                        <p class="capability-desc">Automatically detect tasks, commitments, and deliverables from transcript dialogue.</p>
+                    </div>
+
+                    <div class="capability-card">
+                        <div class="capability-icon">👤</div>
+                        <h3 class="capability-title">Owner Detection</h3>
+                        <p class="capability-desc">Identify responsible team members assigned to specific action items and deliverables.</p>
+                    </div>
+
+                    <div class="capability-card">
+                        <div class="capability-icon">📅</div>
+                        <h3 class="capability-title">Deadline Detection</h3>
+                        <p class="capability-desc">Extract target dates, milestones, and timelines mentioned during the meeting.</p>
+                    </div>
+
+                    <div class="capability-card">
+                        <div class="capability-icon">🎯</div>
+                        <h3 class="capability-title">Decision Extraction</h3>
+                        <p class="capability-desc">Pinpoint agreed decisions, approved directions, and strategic conclusions.</p>
+                    </div>
+
+                    <div class="capability-card">
+                        <div class="capability-icon">📊</div>
+                        <h3 class="capability-title">Sentiment Analysis</h3>
+                        <p class="capability-desc">Gauge overall meeting sentiment, team alignment, and conversational tone.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             5. HOW IT WORKS
+             =================================================== -->
+        <section class="py-section" id="how-it-works" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Workflow</span>
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-desc">From spoken words to actionable intelligence in four simple steps.</p>
+                </div>
+
+                <div class="how-it-works-layout">
+                    <div class="steps-list">
+                        <div class="step-card active">
+                            <div class="step-number">01 — STEP</div>
+                            <h3 class="step-title">Provide Your Meeting</h3>
+                            <p class="step-desc">Paste a transcript, upload a TXT/DOCX file, or use speech-to-text.</p>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">02 — STEP</div>
+                            <h3 class="step-title">AI Processes the Meeting</h3>
+                            <p class="step-desc">The NLP pipeline analyzes the meeting content.</p>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">03 — STEP</div>
+                            <h3 class="step-title">Review Meeting Intelligence</h3>
+                            <p class="step-desc">See summaries, participants, topics, action items, owners, deadlines, decisions, and sentiment.</p>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">04 — STEP</div>
+                            <h3 class="step-title">Take Action</h3>
+                            <p class="step-desc">Use the extracted information to follow up and move work forward.</p>
+                        </div>
+                    </div>
+
+                    <div class="how-it-works-visual">
+                        <h3 style="font-family: var(--font-heading); font-size: 22px; margin-bottom: 20px;">NLP Intelligence Engine</h3>
+                        <div class="flow-node">
+                            <div class="flow-node-title"><span>📥</span> 1. Raw Meeting Ingestion</div>
+                            <div class="flow-node-desc">Multi-format support for raw text, .docx documents, and live microphone speech recognition.</div>
+                        </div>
+                        <div class="flow-node">
+                            <div class="flow-node-title"><span>⚙️</span> 2. NLP Pipeline & Named Entity Extraction</div>
+                            <div class="flow-node-desc">Identifies participants, dates, tasks, owners, and intent with contextual parsing.</div>
+                        </div>
+                        <div class="flow-node">
+                            <div class="flow-node-title"><span>✨</span> 3. Structured Intelligence Output</div>
+                            <div class="flow-node-desc">Generates summaries, assigned deliverables, key decisions, and sentiment analytics.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             6. MEETING INTELLIGENCE (Split-screen)
+             =================================================== -->
+        <section class="py-section" id="meeting-intelligence">
+            <div class="container">
+                <div class="split-section">
+                    <div class="intelligence-left">
+                        <div style="font-size: 12px; font-weight: 700; color: #2563eb; margin-bottom: 8px;">RESULTS DASHBOARD</div>
+                        <h3 style="font-family: var(--font-heading); font-size: 22px; margin-bottom: 16px; color: var(--text-primary);">Executive Intelligence View</h3>
+                        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: 12px; padding: 18px; margin-bottom: 14px;">
+                            <div style="font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 4px;">EXECUTIVE SUMMARY</div>
+                            <p style="font-size: 14px; color: #334155; line-height: 1.5;">Sprint commitments confirmed. All blockers cleared for the Q3 feature launch.</p>
+                        </div>
+                        <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: 12px; padding: 18px;">
+                            <div style="font-size: 12px; font-weight: 700; color: #64748b; margin-bottom: 8px;">EXTRACTED METRICS</div>
+                            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; text-align: center;">
+                                <div style="background: #f8fafc; padding: 10px; border-radius: 8px;">
+                                    <div style="font-size: 20px; font-weight: 700; color: #0f172a;">3</div>
+                                    <div style="font-size: 11px; color: #64748b;">Action Items</div>
+                                </div>
+                                <div style="background: #f8fafc; padding: 10px; border-radius: 8px;">
+                                    <div style="font-size: 20px; font-weight: 700; color: #0f172a;">2</div>
+                                    <div style="font-size: 11px; color: #64748b;">Decisions</div>
+                                </div>
+                                <div style="background: #ecfdf5; padding: 10px; border-radius: 8px;">
+                                    <div style="font-size: 20px; font-weight: 700; color: var(--emerald);">Positive</div>
+                                    <div style="font-size: 11px; color: var(--emerald);">Sentiment</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="intelligence-right">
+                        <span class="section-tag">Instant Clarity</span>
+                        <h2 class="section-title">Understand Every Meeting at a Glance</h2>
+                        <p class="section-desc">See the information that matters most without reading an entire transcript.</p>
+                        
+                        <div class="feature-pills-list">
+                            <span class="feature-pill-badge">✨ Summary</span>
+                            <span class="feature-pill-badge">👥 Participants</span>
+                            <span class="feature-pill-badge">📌 Topics</span>
+                            <span class="feature-pill-badge">⚡ Action Items</span>
+                            <span class="feature-pill-badge">👤 Owners & Deadlines</span>
+                            <span class="feature-pill-badge">🎯 Decisions</span>
+                            <span class="feature-pill-badge">📊 Sentiment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             7. INPUT METHODS
+             =================================================== -->
+        <section class="py-section" id="input-methods" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Input Options</span>
+                    <h2 class="section-title">Bring Your Meeting to Smart Meeting Generator</h2>
+                    <p class="section-desc">Choose the input method that fits your workflow best.</p>
+                </div>
+
+                <div class="inputs-grid">
+                    <div class="input-card">
+                        <div class="input-card-icon">📋</div>
+                        <h3 class="input-card-title">Paste Transcript</h3>
+                        <p class="input-card-desc">Paste meeting text directly.</p>
+                    </div>
+
+                    <div class="input-card">
+                        <div class="input-card-icon">📄</div>
+                        <h3 class="input-card-title">Upload TXT</h3>
+                        <p class="input-card-desc">Upload a text transcript.</p>
+                    </div>
+
+                    <div class="input-card">
+                        <div class="input-card-icon">📑</div>
+                        <h3 class="input-card-title">Upload DOCX</h3>
+                        <p class="input-card-desc">Upload a Word transcript.</p>
+                    </div>
+
+                    <div class="input-card">
+                        <div class="input-card-icon">🎤</div>
+                        <h3 class="input-card-title">Speech-to-Text</h3>
+                        <p class="input-card-desc">Use speech input to create a transcript.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             8. BUILT FOR SMARTER MEETINGS
+             =================================================== -->
+        <section class="py-section" id="built-for-smarter-meetings">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Philosophy</span>
+                    <h2 class="section-title">Built for Smarter Meetings</h2>
+                    <p class="section-desc">Smart Meeting Generator uses NLP to transform meeting conversations into structured intelligence.</p>
+                </div>
+
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <span class="pillar-badge">NLP-POWERED</span>
+                        <h3 class="pillar-title">NLP-Powered</h3>
+                        <p class="pillar-desc">Extract useful information from natural language.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <span class="pillar-badge">STRUCTURED OUTPUT</span>
+                        <h3 class="pillar-title">Structured Output</h3>
+                        <p class="pillar-desc">Turn conversations into organized meeting insights.</p>
+                    </div>
+
+                    <div class="pillar-card">
+                        <span class="pillar-badge">ACTION-ORIENTED</span>
+                        <h3 class="pillar-title">Action-Oriented</h3>
+                        <p class="pillar-desc">Highlight tasks, owners, deadlines, and decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             9. OUR TEAM
+             =================================================== -->
+        <section class="py-section" id="our-team" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Team</span>
+                    <h2 class="section-title">Our Team Members</h2>
+                    <p class="section-desc">The dedicated team behind the Smart Meeting Generator intelligence platform.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img" src="images/46BeQ2wb2me2jpLhG1utxb9JCAY.2fa88.png" alt="Michael Brown">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="team-name">Michael Brown</h3>
+                            <p class="team-role">Founder &amp; CEO</p>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img" src="images/t93Qph5xV1LZxZheJP34VeaGVQ.2fa88.png" alt="Sarah White">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="team-name">Sarah White</h3>
+                            <p class="team-role">UI UX Designer</p>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img" src="images/QN3dPzImQZBXnbv6Qd4lpK5aHf4.2fa88.png" alt="David Brown">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="team-name">David Brown</h3>
+                            <p class="team-role">Head of Marketing</p>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-img-wrapper">
+                            <img class="team-img" src="images/bEzkYvyTx0dwNfgqROfXN7A7NtA.2fa88.png" alt="Emile Johnson">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="team-name">Emile Johnson</h3>
+                            <p class="team-role">Head of Operations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             10. FAQ
+             =================================================== -->
+        <section class="py-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">FAQ</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-desc">Everything you need to know about processing meeting intelligence.</p>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary class="faq-question">
+                            <span>What is Smart Meeting Generator?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            Smart Meeting Generator is an AI-powered meeting intelligence workspace that turns meeting transcripts and recordings into concise summaries, clear action items, assigned owners, detected deadlines, key decisions, and sentiment analysis.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What input formats are supported?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            You can paste raw text transcripts directly, upload .txt or .docx documents, or record audio live using browser speech-to-text.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can I paste a transcript directly?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            Yes, simply paste your meeting transcript into the New Meeting input box and click Process Meeting.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can I upload TXT and DOCX files?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            Yes, standard text (.txt) and Microsoft Word (.docx) documents are fully supported for automated transcript extraction.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How does Speech-to-Text work?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            Using the built-in browser Speech-to-Text engine, you can dictate or record live audio to generate an instant transcript ready for analysis.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What information does the system extract?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            The NLP pipeline extracts executive summaries, meeting participants, discussed topics, action items, assigned owners, deadlines, decisions made, and conversational sentiment.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can the system identify owners and deadlines?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            Yes, the NLP engine automatically detects person entities assigned to tasks and identifies temporal expressions as deadlines.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What are meeting decisions?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            Meeting decisions are key agreements, sign-offs, and strategic conclusions identified during the conversation.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How does sentiment analysis work?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            Sentiment analysis analyzes the tone and language across the meeting transcript to provide an overall sentiment rating and conversational breakdown.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can I view previous meetings?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            Yes, processed meetings are saved in your local Meeting History so you can search, review, and export them anytime.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What is the Analytics dashboard?</span>
+                            <span class="faq-icon">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            The Analytics dashboard provides visual charts and aggregate metrics on total meetings processed, action item completion rates, and participant activity.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================
+             11. FINAL CTA
+             =================================================== -->
+        <section class="py-section" id="cta">
+            <div class="container">
+                <div class="cta-card">
+                    <h2 class="cta-title">Turn Your Meetings Into Action</h2>
+                    <p class="cta-desc">Stop letting critical meeting commitments get lost. Generate structured summaries, owners, deadlines, and insights in seconds.</p>
+                    <a href="#new-meeting" class="cta-btn">
+                        <span>Process a Meeting</span>
+                        <span>&rarr;</span>
+                    </a>
+
+                    <div class="cta-badges-row">
+                        <div class="cta-badge"><span>✓</span> <span>TXT / DOCX Upload</span></div>
+                        <div class="cta-badge"><span>✓</span> <span>Speech-to-Text</span></div>
+                        <div class="cta-badge"><span>✓</span> <span>AI NLP Insights</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================================================
+         12. FOOTER
+         =================================================== -->
+    <footer class="footer-wrapper" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="nav-logo-icon" style="width: 28px; height: 28px; font-size: 14px;">⚡</div>
+                        <span>Smart Meeting Generator</span>
+                    </div>
+                    <p class="footer-desc">
+                        AI-powered meeting intelligence platform that turns natural dialogue into structured summaries, action items, owners, and decisions.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="footer-col-title">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#new-meeting">New Meeting</a></li>
+                        <li><a href="#meeting-history">History</a></li>
+                        <li><a href="#analytics">Analytics</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-col-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#core-capabilities">Capabilities</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Smart Meeting Generator. All rights reserved.</p>
+                <p style="color: #64748b;">Powered by Advanced Natural Language Processing</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mammoth library for .docx file parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/mammoth@1.9.0/mammoth.browser.min.js"></script>
+    <!-- Chart.js for analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Application Logic -->
+    <script src="smartmeet.js"></script>
+</body>
+</html>
